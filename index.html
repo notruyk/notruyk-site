@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NotRuyk — Minecraft Plugin Developer, Server Manager &amp; Moderator</title>
-<meta name="description" content="NotRuyk: Minecraft plugin developer (1.20.1 – 26.2), server builder, server manager and Discord moderator.">
+<title>NotRuyk — Minecraft Developer, Server Manager &amp; Moderator</title>
+<meta name="description" content="NotRuyk: Minecraft developer (1.20.1 – 26.2), server builder, server manager and Discord moderator.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,7 +21,6 @@ body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 var(--sans)
 a{color:inherit;text-decoration:none}
 .bg{position:fixed;inset:0;z-index:-1;pointer-events:none;background:
 radial-gradient(600px 400px at 85% 8%,var(--glow),transparent 70%),radial-gradient(500px 380px at 5% 70%,rgba(34,211,238,.08),transparent 70%)}
-.bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000,transparent 70%);mask-image:radial-gradient(ellipse at 50% 20%,#000,transparent 70%);opacity:.6}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 .top{display:flex;justify-content:space-between;align-items:center;padding:28px 0;font:500 13px var(--mono);letter-spacing:.04em}
 .top nav{display:flex;gap:26px}
@@ -86,7 +85,18 @@ footer button{all:unset;cursor:pointer;color:var(--fg)}footer button:hover{color
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
 .js .rv.in{opacity:1;transform:none}
 @media (max-width:620px){.top nav{gap:16px}.top .hide{display:none}.btn{width:100%;justify-content:center}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}.trk{animation-duration:70s!important;animation-iteration-count:infinite!important}.mq.r .trk{animation-duration:85s!important}}
+@media (prefers-reduced-motion:reduce){.dot,.bg::before{animation:none}.card,.btn,.btn i,.rv{transition:none}}
+/* glass theme */
+:root{--gl1:rgba(255,255,255,.13);--gl2:rgba(255,255,255,.04);--gb:rgba(255,255,255,.2);--sh:rgba(0,0,0,.45);--hi:rgba(255,255,255,.3)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--gl1:rgba(255,255,255,.8);--gl2:rgba(255,255,255,.4);--gb:rgba(255,255,255,.95);--sh:rgba(40,70,100,.2);--hi:rgba(255,255,255,.9)}}
+:root[data-theme="light"]{--gl1:rgba(255,255,255,.8);--gl2:rgba(255,255,255,.4);--gb:rgba(255,255,255,.95);--sh:rgba(40,70,100,.2);--hi:rgba(255,255,255,.9)}
+:root[data-theme="dark"]{--gl1:rgba(255,255,255,.13);--gl2:rgba(255,255,255,.04);--gb:rgba(255,255,255,.2);--sh:rgba(0,0,0,.45);--hi:rgba(255,255,255,.3)}
+.bg{overflow:hidden}
+.bg::before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 20% 25%,rgba(74,222,128,.4),transparent 30%),radial-gradient(circle at 80% 15%,rgba(34,211,238,.36),transparent 32%),radial-gradient(circle at 70% 75%,rgba(139,92,246,.32),transparent 34%),radial-gradient(circle at 15% 85%,rgba(34,211,238,.26),transparent 30%);filter:blur(45px);animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(4%,-3%,0) scale(1.12) rotate(6deg)}}
+.card{background:linear-gradient(135deg,var(--gl1),var(--gl2));-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);border:1px solid var(--gb);box-shadow:0 14px 44px -14px var(--sh),inset 0 1px 0 var(--hi)}
+.btn.g{background:linear-gradient(135deg,var(--gl1),var(--gl2));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--gb);box-shadow:inset 0 1px 0 var(--hi)}
+.mq{background:linear-gradient(90deg,var(--gl2),var(--gl1),var(--gl2));-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-color:var(--gb)}
 </style>
 </head>
 <body>
@@ -101,7 +111,7 @@ footer button{all:unset;cursor:pointer;color:var(--fg)}footer button:hover{color
     <div class="tag"><span class="dot"></span>Open to work</div>
     <h1 data-split="NotRuyk" aria-label="NotRuyk"></h1>
     <div class="role">I’m a <b id="tw"></b><span class="caret"></span></div>
-    <p class="lead">Plugin developer for Minecraft 1.20.1 – 26.2, server builder, and a server manager and moderator who can run any Minecraft server or Discord community, and keep it clean, fast and active.</p>
+    <p class="lead">Minecraft developer, server builder, server manager and moderator. I build and run servers on 1.20.1 – 26.2, and I can manage and moderate any Minecraft server or Discord community, keeping it clean, fast and active.</p>
     <div class="btns">
       <button class="btn p" id="dc" type="button"><span id="dct">Discord · dem1ser</span><i>↗</i></button>
       <a class="btn g" href="mailto:swarnamaity054@gmail.com?subject=Hiring%20NotRuyk">Email me <i>↗</i></a>
@@ -166,7 +176,7 @@ const h=$("[data-split]");[...h.dataset.split].forEach((c,i)=>{const s=document.
 /* typewriter */
 const roles=["Plugin Developer","Server Builder","Server Manager","Discord Moderator"];
 let r=0,c=0,del=false;const tw=$("#tw");
-(function tick(){const w=roles[r];if(reduce){tw.textContent=w;return}
+(function tick(){const w=roles[r];
 c+=del?-1:1;tw.textContent=w.slice(0,c);let t=del?35:75;
 if(!del&&c===w.length){del=true;t=1500}else if(del&&c===0){del=false;r=(r+1)%roles.length;t=300}
 setTimeout(tick,t)})();
