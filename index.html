@@ -109,12 +109,24 @@ h1 span{background-image:linear-gradient(120deg,var(--fg) 18%,var(--a1) 42%,var(
 .blk:nth-child(3){top:60%;right:5%;width:84px;height:84px;background-color:rgba(34,211,238,.26);animation-delay:-4s}
 .blk:nth-child(4){top:10%;right:30%;width:30px;height:30px;background-color:rgba(74,222,128,.35);animation-delay:-1s}
 @keyframes flt{50%{transform:translateY(-24px) rotate(14deg)}}
-.card h3::before{display:block;width:fit-content;font-size:30px;margin-bottom:10px;line-height:1}
+#services .card h3::before,#why .card h3::before{content:"";display:block;width:34px;height:34px;margin-bottom:14px;background:linear-gradient(135deg,var(--a1),var(--a2));-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
 .card:hover h3::before{animation:wig .6s}
 @keyframes wig{40%{transform:rotate(-14deg) scale(1.25)}70%{transform:rotate(8deg) scale(1.1)}}
-#services .card:nth-child(1) h3::before{content:"🔌"}#services .card:nth-child(2) h3::before{content:"⛏️"}#services .card:nth-child(3) h3::before{content:"🚀"}#services .card:nth-child(4) h3::before{content:"🛡️"}
-#why .card:nth-child(1) h3::before{content:"🧩"}#why .card:nth-child(2) h3::before{content:"⚡"}#why .card:nth-child(3) h3::before{content:"💬"}#why .card:nth-child(4) h3::before{content:"👋"}
+#services .card:nth-child(1){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8z'/%3E%3C/svg%3E")}
+#services .card:nth-child(2){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 8l-9-5-9 5v8l9 5 9-5zM3.3 7L12 12l8.7-5M12 22V12'/%3E%3C/svg%3E")}
+#services .card:nth-child(3){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='2' width='20' height='8' rx='2'/%3E%3Crect x='2' y='14' width='20' height='8' rx='2'/%3E%3Cpath d='M6 6h.01M6 18h.01'/%3E%3C/svg%3E")}
+#services .card:nth-child(4){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E")}
+#why .card:nth-child(1){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2L2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E")}
+#why .card:nth-child(2){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9z'/%3E%3C/svg%3E")}
+#why .card:nth-child(3){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E")}
+#why .card:nth-child(4){--ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'/%3E%3Cpath d='M22 7l-10 6L2 7'/%3E%3C/svg%3E")}
 @media (max-width:620px){.blk{opacity:.7;transform-origin:center}.blk:nth-child(3){width:56px;height:56px}}
+#stats{padding-top:64px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.stat{padding:32px 20px;border-radius:20px;text-align:center;background:linear-gradient(135deg,var(--gl1),var(--gl2));border:1px solid var(--gb);-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%);box-shadow:0 14px 44px -14px var(--sh),inset 0 1px 0 var(--hi)}
+.stat b{display:block;font-size:clamp(46px,7vw,76px);line-height:1;letter-spacing:-.04em;background:linear-gradient(120deg,var(--a1),var(--a2),var(--a3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat b::after{content:"+"}.stat b.more::after{content:""}
+.stat span{display:block;margin-top:12px;color:var(--mut);font:500 13px var(--mono);letter-spacing:.06em;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -132,7 +144,7 @@ h1 span{background-image:linear-gradient(120deg,var(--fg) 18%,var(--a1) 42%,var(
     <div class="role">I’m a <b id="tw"></b><span class="caret"></span></div>
     <p class="lead">Minecraft developer, server builder, server manager and moderator. I build and run servers on 1.20.1 – 26.2, and I can manage and moderate any Minecraft server or Discord community, keeping it clean, fast and active.</p>
     <div class="btns">
-      <button class="btn p" id="dc" type="button"><span id="dct">Discord · dem1ser</span><i>↗</i></button>
+      <button class="btn p" id="dc" type="button"><span id="dct">Discord · notruyk</span><i>↗</i></button>
       <a class="btn g" href="mailto:swarnamaity054@gmail.com?subject=Hiring%20NotRuyk">Email me <i>↗</i></a>
       <a class="btn g" href="https://github.com/notruyk" target="_blank" rel="noopener">GitHub <i>↗</i></a>
     </div>
@@ -142,6 +154,13 @@ h1 span{background-image:linear-gradient(120deg,var(--fg) 18%,var(--a1) 42%,var(
 <div class="mq" data-t="Plugin Developer|Server Builder|Server Manager|Discord Moderator|Community Manager"></div>
 
 <main class="wrap">
+  <section id="stats"><div class="stats">
+      <div class="stat rv"><b data-n="15">15</b><span>Servers developed</span></div>
+      <div class="stat rv"><b data-n="10">10</b><span>Servers moderated</span></div>
+      <div class="stat rv"><b data-n="10">10</b><span>Servers managed</span></div>
+      <div class="stat rv"><b class="more">∞</b><span>And much more</span></div>
+    </div></section>
+
   <section id="services">
     <div class="eyebrow rv">What I do</div>
     <h2 class="rv">Everything your server needs, from code to community.</h2>
@@ -159,7 +178,7 @@ h1 span{background-image:linear-gradient(120deg,var(--fg) 18%,var(--a1) 42%,var(
       <div class="card rv"><div class="n">01</div><h3>The whole stack</h3><p>Plugins, server setup, staff and player management, all handled by one person, so nothing falls between the cracks.</p></div>
       <div class="card rv"><div class="n">02</div><h3>Every version</h3><p>I work across Minecraft 1.20.1 through 26.2, so your server can stay up to date.</p></div>
       <div class="card rv"><div class="n">03</div><h3>Minecraft and Discord</h3><p>I can manage and moderate any Minecraft server and any Discord server, keeping both organised and friendly.</p></div>
-      <div class="card rv"><div class="n">04</div><h3>Easy to reach</h3><p>Message me on Discord (dem1ser) or email, and tell me what your server needs.</p></div>
+      <div class="card rv"><div class="n">04</div><h3>Easy to reach</h3><p>Message me on Discord (notruyk) or email, and tell me what your server needs.</p></div>
     </div></section>
 
   <section id="work" hidden><div class="eyebrow rv">Experience</div><h2 class="rv">Servers I’ve worked on.</h2><div class="grid" id="wl"></div></section>
@@ -169,7 +188,7 @@ h1 span{background-image:linear-gradient(120deg,var(--fg) 18%,var(--a1) 42%,var(
     <div class="eyebrow rv">Contact</div>
     <h2 class="rv">Let’s build something great.</h2>
     <div class="btns rv">
-      <button class="btn p" id="dc2" type="button"><span id="dct2">Discord · dem1ser</span><i>↗</i></button>
+      <button class="btn p" id="dc2" type="button"><span id="dct2">Discord · notruyk</span><i>↗</i></button>
       <a class="btn g" href="mailto:swarnamaity054@gmail.com?subject=Hiring%20NotRuyk">swarnamaity054@gmail.com <i>↗</i></a>
     </div>
     <small>Click the Discord button to copy my username.</small>
@@ -223,7 +242,7 @@ if("IntersectionObserver"in window){const io=new IntersectionObserver(es=>es.for
 else els.forEach(e=>e.classList.add("in"));
 
 /* discord: copy username */
-function copyDc(label){return async()=>{try{await navigator.clipboard.writeText("dem1ser");label.textContent="Copied ✓ dem1ser"}catch(e){label.textContent="Discord · dem1ser"}setTimeout(()=>label.textContent="Discord · dem1ser",2200)}}
+function copyDc(label){return async()=>{try{await navigator.clipboard.writeText("notruyk");label.textContent="Copied ✓ notruyk"}catch(e){label.textContent="Discord · notruyk"}setTimeout(()=>label.textContent="Discord · notruyk",2200)}}
 $("#dc").onclick=copyDc($("#dct"));$("#dc2").onclick=copyDc($("#dct2"));
 
 /* desktop only: 3D card tilt, magnetic buttons, cursor glow */
@@ -232,10 +251,6 @@ if(matchMedia("(hover:hover) and (pointer:fine)").matches){
     k.addEventListener("pointermove",e=>{const b=k.getBoundingClientRect();const x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;k.style.transition="transform .12s,border-color .3s,opacity .8s";k.style.transform="perspective(700px) rotateX("+(-y*8)+"deg) rotateY("+(x*8)+"deg) translateY(-6px)"});
     k.addEventListener("pointerleave",()=>{k.style.transition="transform .5s,border-color .3s,opacity .8s";k.style.transform=""});
   });
-  document.querySelectorAll(".btn").forEach(b=>{
-    b.addEventListener("pointermove",e=>{const r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.18)+"px,"+((e.clientY-r.top-r.height/2)*.3-3)+"px)"});
-    b.addEventListener("pointerleave",()=>{b.style.transform=""});
-  });
   const gl=document.createElement("div");gl.className="cur";document.body.appendChild(gl);
   addEventListener("pointermove",e=>{gl.style.transform="translate("+(e.clientX-200)+"px,"+(e.clientY-200)+"px)"});
 }
@@ -243,6 +258,12 @@ if(matchMedia("(hover:hover) and (pointer:fine)").matches){
 /* confetti when the main buttons are clicked */
 function pop(e){const cs=["#4ade80","#22d3ee","#2dd4bf","#86efac","#67e8f9"];for(let i=0;i<28;i++){const d=document.createElement("i");d.style.cssText="position:fixed;left:"+e.clientX+"px;top:"+e.clientY+"px;width:8px;height:8px;border-radius:2px;pointer-events:none;z-index:99;background:"+cs[i%5];document.body.appendChild(d);const a=Math.random()*6.28,s=70+Math.random()*130;d.animate([{transform:"translate(0,0) rotate(0deg)",opacity:1},{transform:"translate("+Math.cos(a)*s+"px,"+(Math.sin(a)*s+80)+"px) rotate("+Math.random()*540+"deg)",opacity:0}],{duration:900+Math.random()*500,easing:"cubic-bezier(.2,.7,.3,1)"}).onfinish=()=>d.remove()}}
 document.querySelectorAll(".btn.p").forEach(b=>b.addEventListener("click",pop));
+
+/* count-up numbers */
+if("IntersectionObserver"in window){
+  const cio=new IntersectionObserver(es=>es.forEach(x=>{if(!x.isIntersecting)return;cio.unobserve(x.target);const el=x.target,n=+el.dataset.n;let t0=null;requestAnimationFrame(function f(t){t0=t0||t;const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})}),{threshold:.6});
+  document.querySelectorAll("[data-n]").forEach(e=>{e.textContent="0";cio.observe(e)});
+}
 
 /* theme toggle */
 $("#th").onclick=()=>{const d=document.documentElement;const cur=d.dataset.theme||"dark";d.dataset.theme=cur==="dark"?"light":"dark"};
